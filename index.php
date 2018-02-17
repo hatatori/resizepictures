@@ -1,10 +1,13 @@
 <?php
 
+	if(!file_exists("imgs_mini"))
+		mkdir("imgs_mini");
+
 	$name = "lampada.jpg";
 
 	$img = imagecreatefromjpeg("imgs/$name");
 
-	$imgSizes = getimagesize("imagens/$name");
+	$imgSizes = getimagesize("imgs/$name");
 
 	$old_width = $imgSizes[0];
 	$old_height = $imgSizes[1];
